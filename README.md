@@ -25,3 +25,42 @@ usage: git submodule [--quiet] add [-b <branch>] [-f|--force] [--name <name>] [-
 
 
 ![image](https://user-images.githubusercontent.com/7291672/77306322-765fbe80-6d32-11ea-9e98-e4f0e9276f8b.png)
+
+
+***
+
+
+## git submodule tutorials
+
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+https://git-scm.com/docs/git-submodule
+
+> steps
+
+```sh
+# step 01: create an empty submodule folder
+$ mkdir demo_repo
+
+# step 02: git submodule add
+$ git submodule add http://git.xgqfrms.xyz/git-submodule
+
+```
+### step 03: create an `.gitmodules` config file
+
+```.gitmodules
+
+[submodule "demo_repo"]
+  path = demo_repo
+  url = http://git.xgqfrms.xyz/git-submodule.git
+
+```
+
+```sh
+# step 04: init submodule
+$ git submodule init
+
+# step 05: clone submodule
+$ git submodule update
+
+```
